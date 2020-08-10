@@ -157,7 +157,7 @@ EOD;
         $rowIndexOneBased = $worksheet->getLastWrittenRowIndex() + 1;
         $numCells = $row->getNumCells();
 
-        $rowXML = '<row r="' . $rowIndexOneBased . '" spans="1:' . $numCells . '">';
+        $rowXML = '<row r="' . $rowIndexOneBased . '" spans="1:' . $numCells . '" ht="15" customHeight="1">';
 
         foreach ($row->getCells() as $columnIndexZeroBased => $cell) {
             $rowXML .= $this->applyStyleAndGetCellXML($cell, $rowStyle, $rowIndexOneBased, $columnIndexZeroBased);
